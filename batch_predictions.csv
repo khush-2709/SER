@@ -1,0 +1,8 @@
+filename,predicted_emotion,angry_prob,calm_prob,disgust_prob,fearful_prob,happy_prob,neutral_prob,sad_prob,surprised_prob
+DC_a02.wav,angry,0.9997,0.0,0.0,0.0003,0.0,0.0,0.0,0.0
+DC_a03.wav,angry,0.9999,0.0,0.0,1e-04,0.0,0.0,0.0,0.0
+DC_d01.wav,sad,0.4156,0.0101,0.0038,0.0003,0.0029,0.0839,0.4794,0.0039
+DC_f01.wav,disgust,1e-04,0.0634,0.9366,0.0,0.0,0.0,0.0,0.0
+DC_f05.wav,happy,0.032,0.0673,0.0641,0.0218,0.8148,0.0,0.0,0.0
+DC_h04.wav,angry,0.7229,0.0,0.0,0.0378,0.2393,0.0,0.0,0.0
+DC_h05.wav,angry,0.697,0.0,0.0004,0.0,0.3024,0.0,0.0002,0.0
