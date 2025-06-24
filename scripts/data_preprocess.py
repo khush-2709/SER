@@ -43,7 +43,6 @@ def preprocess_audio_file(file_path):
     # Extract features
     features = extract_feature(data, sr, mfcc=True, chroma=True, mel=True)
 
-    # Reshape to match CNN model input shape
     features = features.reshape(1, -1, 1)
 
     return features

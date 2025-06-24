@@ -33,11 +33,10 @@ def predict_emotion(file_path, model_path="model/ser.keras", return_all=False):
     if return_all:
         return predicted_class, predictions[0]
     
-    # Print results if not used in batch
+    
     print(f"\nEmotion Predicted: {predicted_class}")
     print("\nClass Probabilities:")
     for i, prob in enumerate(predictions[0]):
         print(f"{emotion_labels[i]:<10s}: {prob:.4f}")
     
-    return predicted_class  # Optional: still return for interactive use
-
+    return predicted_class  

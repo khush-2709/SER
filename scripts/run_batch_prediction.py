@@ -1,19 +1,19 @@
 import os
 import pandas as pd
-from test import predict_emotion  # assumes this handles file_path + model_path
+from test import predict_emotion  
 
 import sys
 import io
 
-# Force stdout to use UTF-8
+
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 
-# Your settings
-folder_path = 'test_audio/'          # Folder with .wav or .mp3 files
+
+folder_path = 'test_audio/'         
 model_path = 'model/ser.keras'
 
-# Output list
+
 results = []
 
 for filename in os.listdir(folder_path):
@@ -21,10 +21,8 @@ for filename in os.listdir(folder_path):
         file_path = os.path.join(folder_path, filename)
         print(f"\nProcessing: {filename}")
         
-        # Get prediction from your existing test.py
         predicted_label, probabilities = predict_emotion(file_path, model_path, return_all=True)
-        
-        # Save to results
+       
         result_entry = {
             "filename": filename,
             "predicted_emotion": predicted_label,

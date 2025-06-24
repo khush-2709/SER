@@ -14,10 +14,7 @@ le = LabelEncoder()
 le.fit(emotion_labels)
 
 def convert_to_wav(file_path):
-    """
-    Convert audio file to .wav if needed.
-    Returns the path to the .wav file.
-    """
+    
     if file_path.endswith(".wav"):
         return file_path
 
@@ -27,10 +24,7 @@ def convert_to_wav(file_path):
     return wav_path
 
 def predict_emotion_web(file_path, model_path="model/ser.keras"):
-    """
-    Predict emotion from audio for web app use.
-    Returns predicted label and class probabilities.
-    """
+   
     wav_path = convert_to_wav(file_path)
     data, sr = librosa.load(wav_path)
     features = extract_feature(data, sr, mfcc=True, chroma=True, mel=True)
